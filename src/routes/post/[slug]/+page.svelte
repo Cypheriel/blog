@@ -7,10 +7,11 @@
 
 <svelte:head>
     <title>{data.post.Title} | Cypheriel's Thrilling Tales</title>
-    <meta content="{data.post.Title} | Cypheriel's Thrilling Tales" property="og:title" />
-    <meta content="{data.post.Description}" property="og:description" />
-    <meta content="https://blog.cypheriel.dev/post/{data.post.Slug}" property="og:url" />
-    <meta content="#bb99ff" data-react-helmet="true" name="theme-color" />
+    <meta property="og:site_name" content="Cypheriel's Thrilling Tales" />
+    <meta property="og:title" content="{data.post.Title}" />
+    <meta property="og:description" content="{data.post.Description}" />
+    <meta property="og:url" content="https://blog.cypheriel.dev/post/{data.post.Slug}" />
+    <meta property="theme-color" content="#bb99ff" data-react-helmet="true" />
 </svelte:head>
 
 <a class="absolute btn z-10 m-5 bg-secondary/70 text-white" href="../">Back</a>
