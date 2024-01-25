@@ -20,9 +20,9 @@
 </div>
 
 <div class="px-4 py-4">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {#each data.posts as post}
-            <a class="card card-compact bg-base-300 shadow-xl w-80 hover:outline" href="./post/{post.Slug}">
+            <a class="card card-compact bg-base-300 shadow-xl w-92 hover:outline" href="./post/{post.Slug}">
                 <div class="card-body">
                     <h2 class="card-title">
                         {post.Title}
