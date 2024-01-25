@@ -28,7 +28,7 @@
                         {post.Title}
                         <div class="badge">01/24/2024</div>
                     </h2>
-                    <p>TODO: Add short descriptions/subtitles.</p>
+                    <p>{post.Description}</p>
                 </div>
             </a>
         {/each}
