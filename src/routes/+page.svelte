@@ -31,8 +31,8 @@
 
 <svelte:head>
     <title>Home | Cypheriel's Thrilling Tales</title>
-    <meta content="Home | Cypheriel's Thrilling Tales" property="og:title" />
-    <meta content="Enter for Cypheriel's Epic™ Blog" property="og:description" />
+    <meta content="Cypheriel's Thrilling Tales" property="og:title" />
+    <meta content="Enter for Cypheriel's Epic™ blog!" property="og:description" />
     <meta content="https://blog.cypheriel.dev/" property="og:url" />
     <meta content="#bb99ff" data-react-helmet="true" name="theme-color" />
 </svelte:head>
