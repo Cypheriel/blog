@@ -38,20 +38,25 @@
     <p class="py-4">This is a blog.</p>
 </div>
 
-<div class="flex flex-row min-w-fit mx-5 gap-3">
-    <input id="search-box" type="text" placeholder="Search blog posts..." class="input input-bordered input-secondary flex-grow" bind:value={searchQuery} on:input={onEdit} on:change={search} />
+<form class="flex justify-center min-w-fit mx-5 gap-3">
+    <input id="search-box" type="text" placeholder="Search blog posts..." class="input input-bordered w-full max-w-screen-xl" bind:value={searchQuery} on:input={onEdit} on:submit={search} />
     <button type="submit" class="btn btn-primary" on:click={search}>Search</button>
-</div>
+</form>
 
-<div class="px-4 py-4">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+<div class="px-4 py-8">
+    <div class="grid gap-4 grid-cols-1 lg:grid-cols-[repeat(auto-fill,28rem)] justify-center justify-items-center">
         {#each posts as post}
-            <a class="card card-compact bg-base-300 shadow-xl w-92 hover:outline" href="./post/{post.Slug}">
+            <a class="card card-compact bg-base-300 shadow-xl hover:outline w-full" href="./post/{post.Slug}">
                 <div class="card-body">
                     <h2 class="card-title">
                         {post.Title}
-                        <div class="badge">01/24/2024</div>
                     </h2>
+                    <div class="flex flex-col md:flex-row gap-2 -mx-1.5">
+                        <div class="badge">Published {new Date(post.PublishDate * 1000).toLocaleDateString([], { hour: "2-digit", minute: "2-digit"})}</div>
+                        {#if post.PublishDate !== post.LastEditDate}
+                            <div class="badge">Edited {new Date(post.LastEditDate * 1000).toLocaleDateString([], { hour: "2-digit", minute: "2-digit"})}</div>
+                        {/if}
+                    </div>
                     <p>{post.Description}</p>
                 </div>
             </a>
