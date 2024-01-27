@@ -1,6 +1,32 @@
 <script>
     /** @type {import('./$types').PageData} */
     export let data;
+
+    export let posts = data.posts;
+    let searchQuery = "";
+
+    async function search() {
+        console.log(`Searching for '${searchQuery}'`)
+        if (!searchQuery)
+            return;
+
+        console.log("!!!")
+
+        let result = await fetch(`https://blog-db.cypheriel.dev/api/posts/search?q=${searchQuery}`);
+
+        if (!result.ok)
+            return;
+
+        posts = await (result).json();
+
+        console.log(posts)
+    }
+
+    async function onEdit() {
+        if (searchQuery === "") {
+            posts  = data.posts;
+        }
+    }
 </script>
 
 <svelte:head>
@@ -18,15 +44,13 @@
 </div>
 
 <div class="flex flex-row min-w-fit mx-5 gap-3">
-    <input type="text" placeholder="This is not yet functional..." class="input input-bordered input-secondary flex-grow" />
-    <div class="tooltip" data-tip="wtf are you doing">
-        <button type="submit" class="btn">Search(?)</button>
-    </div>
+    <input id="search-box" type="text" placeholder="Search blog posts..." class="input input-bordered input-secondary flex-grow" bind:value={searchQuery} on:input={onEdit} on:change={search} />
+    <button type="submit" class="btn btn-primary" on:click={search}>Search</button>
 </div>
 
 <div class="px-4 py-4">
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {#each data.posts as post}
+        {#each posts as post}
             <a class="card card-compact bg-base-300 shadow-xl w-92 hover:outline" href="./post/{post.Slug}">
                 <div class="card-body">
                     <h2 class="card-title">

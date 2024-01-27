@@ -1,5 +1,5 @@
 /** @type {import('./$types').PageServerLoad} */
-export async function load({params}) {
+export async function load({fetch, params}) {
     return {
         posts: await fetch("https://blog-db.cypheriel.dev/api/posts")
             .then(function (response) {
