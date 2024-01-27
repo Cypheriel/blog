@@ -6,11 +6,8 @@
     let searchQuery = "";
 
     async function search() {
-        console.log(`Searching for '${searchQuery}'`)
         if (!searchQuery)
             return;
-
-        console.log("!!!")
 
         let result = await fetch(`https://blog-db.cypheriel.dev/api/posts/search?q=${searchQuery}`);
 
@@ -18,8 +15,6 @@
             return;
 
         posts = await (result).json();
-
-        console.log(posts)
     }
 
     async function onEdit() {
