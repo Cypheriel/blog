@@ -19,17 +19,18 @@
 
     async function onEdit() {
         if (searchQuery === "") {
-            posts  = data.posts;
+            posts = data.posts;
         }
     }
 </script>
 
 <svelte:head>
     <title>Home | Cypheriel's Thrilling Tales</title>
-    <meta content="Cypheriel's Thrilling Tales" property="og:title" />
-    <meta content="Enter for Cypheriel's Epic™ blog!" property="og:description" />
-    <meta content="https://blog.cypheriel.dev/" property="og:url" />
-    <meta content="#bb99ff" data-react-helmet="true" name="theme-color" />
+    <meta property="og:title" content="Cypheriel's Thrilling Tales"/>
+    <meta property="og:description" content="Enter for Cypheriel's Epic™ blog!"/>
+    <meta property="og:image" content="https://blog.cypheriel.dev/assets/logo_outline.png"/>
+    <meta property="og:url" content="https://blog.cypheriel.dev/"/>
+    <meta name="theme-color" content="#bb99ff" data-react-helmet="true"/>
 </svelte:head>
 
 
@@ -39,7 +40,9 @@
 </div>
 
 <form class="flex justify-center min-w-fit mx-5 gap-3">
-    <input id="search-box" type="text" placeholder="Search blog posts..." class="input input-bordered w-full max-w-screen-xl" bind:value={searchQuery} on:input={onEdit} on:submit={search} />
+    <input id="search-box" type="text" placeholder="Search blog posts..."
+           class="input input-bordered w-full max-w-screen-xl" bind:value={searchQuery} on:input={onEdit}
+           on:submit={search}/>
     <button type="submit" class="btn btn-primary" on:click={search}>Search</button>
 </form>
 
@@ -52,9 +55,15 @@
                         {post.Title}
                     </h2>
                     <div class="flex flex-col md:flex-row gap-2 -mx-1.5">
-                        <div class="badge">Published {new Date(post.PublishDate * 1000).toLocaleDateString([], { hour: "2-digit", minute: "2-digit"})}</div>
+                        <div class="badge">Published {new Date(post.PublishDate * 1000).toLocaleDateString([], {
+                            hour: "2-digit",
+                            minute: "2-digit"
+                        })}</div>
                         {#if post.PublishDate !== post.LastEditDate}
-                            <div class="badge">Edited {new Date(post.LastEditDate * 1000).toLocaleDateString([], { hour: "2-digit", minute: "2-digit"})}</div>
+                            <div class="badge">Edited {new Date(post.LastEditDate * 1000).toLocaleDateString([], {
+                                hour: "2-digit",
+                                minute: "2-digit"
+                            })}</div>
                         {/if}
                     </div>
                     <p>{post.Description}</p>

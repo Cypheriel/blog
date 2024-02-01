@@ -10,6 +10,10 @@
     <meta property="og:site_name" content="Cypheriel's Thrilling Tales" />
     <meta property="og:title" content="{data.post.Title}" />
     <meta property="og:description" content="{data.post.Description}" />
+    {#if (!data.post.Image)}
+        <meta property="og:image" content="https://blog.cypheriel.dev/assets/logo_outline.png"/>
+    {/if}
+    <meta property="og:image" content="https://blog.cypheriel.dev/assets/logo_outline.png"/>
     <meta property="og:url" content="https://blog.cypheriel.dev/post/{data.post.Slug}" />
     <meta property="theme-color" content="#bb99ff" data-react-helmet="true" />
 </svelte:head>
