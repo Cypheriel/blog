@@ -1,0 +1,34 @@
+---
+title: An Introduction
+description: An extremely brief (silly) introduction of myself.
+published: 1731756511
+edited: 1731756511
+slug: introduction
+---
+
+<script>
+   let then = new Date(2004, 3, 5)
+   let now = new Date()
+   let age = Math.floor((now.getTime() - then.getTime()) / 1000 / (60 * 60 * 24) / 365.25)
+</script>
+
+## About me
+Howdy! My name is Mikel, and I am a {age}-year-old programmer, lead robotics mentor, gamer, and wannabe cool guy. As a self-proclaimed "mega cat dude", I make my way through the internet silently judging everyone who comes into my sights. When I'm not judging, I'm probably gaming — Warframe, Minecraft, and Farming Simulator 22, currently. Otherwise, I can probably be caught having random political debates with family and friends. Sometimes, I may even put some of my (amazing) programming skills to use. Hence, I bring to you the creation of this very blog. So, "what the heck kinda programmer are you, anyway?" you may ask... Well...
+
+## A Test
+Just to give you a taste of how *great* I am, I am going to let you in on my little test. I have no idea if the following snippet will actually be what I want it to be, but I figure it's worth trying and this will allow me to be a little bit fancier with my future blog posts.
+<button class="btn btn-secondary" on:click={() => alert("Whoa!")}>Click me!!</button>
+
+## Another Test
+Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
+<progress class="progress w-56"></progress>
+
+## In all seriousness
+Frankly, I expect to use this blog less than I initially intended. There is so much that I want to share, in general, so I kind of expect to take this blog up some time in the future. This may be that time (or not). So, who knows... If the tests above succeeded, I think I might have a little more fun than I expected. Otherwise, maybe that will be my motivation to make it work.
+
+## Regarding suggestions, comments, and/or concerns
+If you have suggestions or comments regarding this blog or its posts, the easiest way to reach me would be on Discord or Matrix. Below are my details for both platforms:
+
+* **Discord Username**: `cypheriel`
+* **Discord Server**: [`https://discord.gg/tWxyyCWaGX`](https://discord.gg/tWxyyCWaGX)
+* **Matrix**: [`@cypheriel:opensuse.org`](https://matrix.to/#/@cypheriel:opensuse.org)
