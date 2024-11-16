@@ -7,9 +7,14 @@ slug: introduction
 ---
 
 <script>
-   const then = new Date(2004, 3, 5)
-   const now = new Date()
-   const age = Math.floor((now.getTime() - then.getTime()) / 1000 / (60 * 60 * 24) / 365.25)
+   const then = new Date(2004, 3, 5);
+   const now = new Date();
+   const age = Math.floor((now.getTime() - then.getTime()) / 1000 / (60 * 60 * 24) / 365.25);
+
+   let lastfmTrigger = false;
+
+   setInterval(() => lastfmTrigger = !lastfmTrigger, 30000);
+
 </script>
 
 ## About me
@@ -90,16 +95,22 @@ Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
         <kbd class="kbd">/<sup class="ml-1 text-xs font-normal leading-none">?</sup></kbd>
         <kbd class="kbd pl-12">Shift</kbd>
     </div>
-    <p class="text-center text-sm italic">
-        I worked weirdly hard on this, so... I hope it manages to stay.
-    </p>
+    <p class="text-center text-sm italic">I worked weirdly hard on this, so... I hope it manages to stay.</p>
 </div>
-
+<p>
 ## In all seriousness
 Frankly, I expect to use this blog less than I initially intended. There is so much that I want to share, in general, so
 I kind of expect to take this blog up some time in the future. This may be that time (or not). So, who knows... If the
 tests above succeeded, I think I might have a little more fun than I expected. Otherwise, maybe that will be my
 motivation to make it work.
+
+## You've made it this far...
+So, get a load of my epic music taste! Yeah, I may listen to a hecka ton of weird garbanzo. However, you gotta admit this is somewhat cool:
+
+
+{#key lastfmTrigger}
+    <iframe src="https://lastfm-recently-played.vercel.app/api?user=Cypheriel" title="Last.fm Widget" height="338" width="404" class="border-2 rounded-xl"></iframe>
+{/key}
 
 ## Regarding suggestions, comments, and/or concerns
 If you have suggestions or comments regarding this blog or its posts, the easiest way to reach me would be on Discord or

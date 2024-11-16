@@ -22,6 +22,6 @@
 <div class="w-screen lg:w-4/5 2xl:w-3/5 mx-auto z-0">
     <article class="z-0 prose prose-lg max-w-full bg-base-300 px-10 pt-20 pb-16 justify-center min-h-screen">
         <h1 class="text-center">{metadata.title}</h1>
-        <svelte:component this={content.default}/>
+        <content.default />
     </article>
 </div>
