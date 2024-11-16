@@ -14,7 +14,7 @@ export async function GET() {
 <feed xmlns="https://www.w3.org/2005/Atom">
     <title>Cypheriel's Thrilling Tales</title>
     <link>https://blog.cypheriel.dev/</link>
-    <description>Cypheriel's amazingly epic general blog + tech.</description>
+    <subtitle>Cypheriel's amazingly epic general blog + tech.</description>
     ${(await getPosts()).map((post) => {
         return `
     <entry>

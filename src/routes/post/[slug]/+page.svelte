@@ -1,8 +1,8 @@
 <script>
-    import SvelteMarkdown from "svelte-markdown";
+    import {marked} from "marked";
 
-    /** @type {import('./$types').PageData} */
-    export let data;
+    /** @type {{ data: import('./$types').PageData}} */
+    let { data } = $props()
 </script>
 
 <svelte:head>
@@ -22,6 +22,6 @@
 <div class="w-screen lg:w-4/5 2xl:w-3/5 mx-auto z-0">
     <article class="z-0 prose prose-lg max-w-full bg-base-300 px-10 pt-20 pb-16 justify-center min-h-screen">
         <h1 class="text-center">{data.post.Title}</h1>
-        <SvelteMarkdown source={data.post.Content} />
+        {@html marked.parse(data.post.Content)}
     </article>
 </div>
