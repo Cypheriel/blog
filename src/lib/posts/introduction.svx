@@ -29,10 +29,12 @@ programmer are you, anyway?" you may ask... Well...
 Just to give you a taste of how *great* I am, I am going to let you in on my little test. I have no idea if the
 following snippet will actually be what I want it to be, but I figure it's worth trying and this will allow me to be a
 little bit fancier with my future blog posts.
+
 <button class="btn btn-secondary" on:click={() => alert("Whoa! A technological marvel!")}>Click me!</button>
 
 ## Another Test
 Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
+
 <div class="[&>*>*]:text-white">
     <div class="my-1 flex w-full justify-center gap-1">
         <kbd class="kbd">`<sup class="ml-1 text-xs font-normal leading-none">~</sup></kbd>
@@ -97,7 +99,6 @@ Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
     </div>
     <p class="text-center text-sm italic">I worked weirdly hard on this, so... I hope it manages to stay.</p>
 </div>
-<p>
 
 ## In all seriousness
 Frankly, I expect to use this blog less than I initially intended. There is so much that I want to share, in general, so
@@ -107,7 +108,6 @@ motivation to make it work.
 
 ## You've made it this far...
 So, get a load of my epic music taste! Yeah, I may listen to a hecka ton of weird garbanzo. However, you gotta admit this is somewhat cool:
-
 
 {#key lastfmTrigger}
     <iframe src="https://lastfm-recently-played.vercel.app/api?user=Cypheriel" title="Last.fm Widget" height="338" width="404" class="border-2 rounded-xl"></iframe>
