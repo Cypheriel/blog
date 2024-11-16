@@ -98,6 +98,7 @@ Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
     <p class="text-center text-sm italic">I worked weirdly hard on this, so... I hope it manages to stay.</p>
 </div>
 <p>
+
 ## In all seriousness
 Frankly, I expect to use this blog less than I initially intended. There is so much that I want to share, in general, so
 I kind of expect to take this blog up some time in the future. This may be that time (or not). So, who knows... If the
