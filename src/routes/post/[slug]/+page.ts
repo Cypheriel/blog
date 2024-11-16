@@ -1,8 +1,9 @@
 /** @type {import('./$types').PageServerLoad} */
 export async function load({params}) {
-    let post = await (await fetch(`https://blog-db.cypheriel.dev/api/posts/post/${params.slug}`)).json()
+    let post = await import(`$lib/posts/${params.slug}.svx`)
 
     return {
-        post: post
+        metadata: post.metadata,
+        content: post
     }
 }

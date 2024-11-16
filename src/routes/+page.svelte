@@ -1,27 +1,11 @@
 <script>
-    /** @type {import('./$types').PageData} */
-    export let data;
+    const posts = import.meta.glob('$lib/posts/*.svx', { eager: true });
+    console.log(posts)
 
-    export let posts = data.posts;
+    // Searching is broken :(
     let searchQuery = "";
-
-    async function search() {
-        if (!searchQuery)
-            return;
-
-        let result = await fetch(`https://blog-db.cypheriel.dev/api/posts/search?q=${searchQuery}`);
-
-        if (!result.ok)
-            return;
-
-        posts = await (result).json();
-    }
-
-    async function onEdit() {
-        if (searchQuery === "") {
-            posts = data.posts;
-        }
-    }
+    async function search() {}
+    async function onEdit() {}
 </script>
 
 <svelte:head>
@@ -40,33 +24,33 @@
 </div>
 
 <form class="flex justify-center min-w-fit mx-5 gap-3">
-    <input id="search-box" type="text" placeholder="Search blog posts..."
-           class="input input-bordered w-full max-w-screen-xl" bind:value={searchQuery} on:input={onEdit}
-           on:submit={search}/>
-    <button type="submit" class="btn btn-primary" on:click={search}>Search</button>
+    <input id="search-box" type="text" placeholder="Search blog posts... (This doesn't work anymore -_-)"
+           class="input input-bordered w-full max-w-screen-xl" bind:value={searchQuery} oninput={onEdit}
+           onsubmit={search}/>
+    <button type="submit" class="btn btn-primary" onclick={search}>Search</button>
 </form>
 
 <div class="px-4 py-8">
     <div class="grid gap-4 grid-cols-1 lg:grid-cols-[repeat(auto-fill,28rem)] justify-center justify-items-center">
-        {#each posts as post}
-            <a class="card card-compact bg-base-300 shadow-xl hover:outline w-full" href="./post/{post.Slug}">
+        {#each Object.values(posts) as post}
+            <a class="card card-compact bg-base-300 shadow-xl hover:outline w-full" href="./post/{post.metadata.slug}">
                 <div class="card-body">
                     <h2 class="card-title">
-                        {post.Title}
+                        {post.metadata.title}
                     </h2>
-                    <div class="flex flex-col md:flex-row gap-2 -mx-1.5">
-                        <div class="badge">Published {new Date(post.PublishDate * 1000).toLocaleDateString([], {
+                    <div class="flex flex-col gap-2 -mx-1.5">
+                        <div class="badge">Published {new Date(post.metadata.published * 1000).toLocaleDateString([], {
                             hour: "2-digit",
                             minute: "2-digit"
                         })}</div>
-                        {#if post.PublishDate !== post.LastEditDate}
-                            <div class="badge">Edited {new Date(post.LastEditDate * 1000).toLocaleDateString([], {
+                        {#if post.metadata.published !== post.metadata.edited}
+                            <div class="badge">Edited {new Date(post.metadata.edited * 1000).toLocaleDateString([], {
                                 hour: "2-digit",
                                 minute: "2-digit"
                             })}</div>
                         {/if}
                     </div>
-                    <p>{post.Description}</p>
+                    <p>{post.metadata.description}</p>
                 </div>
             </a>
         {/each}
