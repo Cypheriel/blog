@@ -1,6 +1,5 @@
 <script>
     const posts = import.meta.glob('$lib/posts/*.svx', { eager: true });
-    console.log(posts)
 
     // Searching is broken :(
     let searchQuery = "";
