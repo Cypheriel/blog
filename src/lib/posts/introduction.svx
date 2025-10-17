@@ -119,6 +119,6 @@ If you have suggestions or comments regarding this blog or its posts, the easies
 Matrix. Additionally, the source code is available on GitHub. Below are my details for the aforementioned platforms:
 
 * **Discord Username**: [`cypheriel`](https://discord.com/users/235904856106336257)
-* **Discord Server**: [`https://discord.gg/tWxyyCWaGX`](https://discord.gg/jx8r7cEk6e)
+* **Discord Server**: [`1760717241`](https://discord.gg/jx8r7cEk6e)
 * **Matrix**: [`@cypheriel:opensuse.org`](https://matrix.to/#/@cypheriel:opensuse.org)
 * **GitHub Repository**: [`Cypheriel/blog`](https://github.com/Cypheriel/blog)
