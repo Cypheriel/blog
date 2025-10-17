@@ -18,22 +18,23 @@ slug: introduction
 </script>
 
 ## About me
-Howdy! My name is Mikel, and I am a {age}-year-old programmer, lead robotics mentor, gamer, and wannabe cool guy. As a
-self-proclaimed "mega cat dude", I make my way through the internet silently judging everyone who comes into my sights.
-When I'm not judging, I'm probably gaming — Warframe, Minecraft, and Farming Simulator 22, currently. Otherwise, I can
-probably be caught having random political debates with family and friends. Sometimes, I may even put some of my
+Howdy! My name is Mikel, and I am a {age}-year-old programmer, lead robotics mentor, and gamer. I make my way through the internet silently judging everyone who comes into my sight.
+When I'm not judging, I'm probably gaming. Sometimes, I may put some of my
 (amazing) programming skills to use. Hence, I bring to you the creation of this very blog. So, "what the heck kinda
-programmer are you, anyway?" you may ask... Well...
+programmer are you, anyway?", you may ask... Well...
 
 ## A Test
 Just to give you a taste of how *great* I am, I am going to let you in on my little test. I have no idea if the
 following snippet will actually be what I want it to be, but I figure it's worth trying and this will allow me to be a
 little bit fancier with my future blog posts.
 
+Yeah, this was all broken, and yeah, I'm very happy that it works now. Turns out, I DO NOT feel like putting everything into an SQL database.
+
 <button class="btn btn-secondary" on:click={() => alert("Whoa! A technological marvel!")}>Click me!</button>
 
 ## Another Test
 Here's to hoping TailwindCSS (+ daisyUI) actually work in these posts, now!
+**Spoiler alert**: It does.
 
 <div class="[&>*>*]:text-white">
     <div class="my-1 flex w-full justify-center gap-1">
@@ -118,6 +119,6 @@ If you have suggestions or comments regarding this blog or its posts, the easies
 Matrix. Additionally, the source code is available on GitHub. Below are my details for the aforementioned platforms:
 
 * **Discord Username**: [`cypheriel`](https://discord.com/users/235904856106336257)
-* **Discord Server**: [`https://discord.gg/tWxyyCWaGX`](https://discord.gg/tWxyyCWaGX)
+* **Discord Server**: [`https://discord.gg/tWxyyCWaGX`](https://discord.gg/jx8r7cEk6e)
 * **Matrix**: [`@cypheriel:opensuse.org`](https://matrix.to/#/@cypheriel:opensuse.org)
 * **GitHub Repository**: [`Cypheriel/blog`](https://github.com/Cypheriel/blog)
